@@ -1,0 +1,10 @@
+import math
+
+class Solution:
+    def productExceptSelf(self, nums: List[int]) -> List[int]:
+        result = []
+
+        for i,_ in enumerate(nums):
+            result.append(math.prod(nums[:i]) * math.prod(nums[i+1:]))
+        
+        return result
